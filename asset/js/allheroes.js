@@ -2,6 +2,7 @@ import heroes from './data/heroes.js';
 import _configSettings from './config.js';
 
 const heroesList = document.querySelector('.heroes-list');
+const heroCards = [];
 
 // Create Hero Card Function
 export function createHeroCard(hero) {
@@ -98,5 +99,24 @@ export function createHeroCard(hero) {
   };
 }
 
-// Iterate over the heroes array and create cards for each hero
-heroes.forEach(hero => createHeroCard(hero));
+// Function to shuffle array (Fisher-Yates shuffle)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+}
+
+// Create hero cards and populate heroCards array
+heroes.forEach(hero => {
+  const { card } = createHeroCard(hero);
+  heroCards.push(card);
+});
+
+// Shuffle heroCards array
+shuffleArray(heroCards);
+
+// Append shuffled hero cards to the heroesList
+heroCards.forEach(card => {
+  heroesList.appendChild(card);
+});

@@ -17,69 +17,73 @@
         </header>
 
         <main style="background-color: white; height: 80%; max-width: fit-content; margin: 0 auto 50px auto;min-width: 90vw;box-shadow: 0 2px 7px rgba(0, 0, 0, .5) inset;">
-            <div id="all-heroes" class="page" style="background-color: white; width: 100%;box-shadow: 0 2px 7px rgba(0, 0, 0, .5) inset;">
-                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px 0 50px 0;">
-                    <label for="hero-filter" style="margin-right: 10px;"><span style="font-size: large;">Name</span></label>
-                    <input type="text" id="hero-filter" placeholder="Filter heroes by name..." style="padding: 5px; font-size: 16px;">
-                    <label for="race-dropdown" style="margin: 0 10px 0 20px;"><span style="font-size: large;">Race</span></label>
-                    <select id="race-dropdown" style="padding: 5px; font-size: 16px;">
-                        <option value="All">- All -</option>
-                        <option value="Alien">Alien</option>
-                        <option value="Android">Android</option>
-                        <option value="Asgardian">Asgardian</option>
-                        <option value="Cyborg">Cyborg</option>
-                        <option value="Demi-God">Demi-God</option>
-                        <option value="Flora Colossus">Flora Colossus</option>
-                        <option value="God / Eternal">God / Eternal</option>
-                        <option value="Human">Human</option>
-                        <option value="Human / Altered">Human/Altered</option>
-                        <option value="Human/Radiation">Human/Radiation</option>
-                        <option value="Human-Kree">Human-Kree</option>
-                        <option value="Kakarantharaian">Kakarantharaian</option>
-                        <option value="Luphomoid">Luphomoid</option>
-                        <option value="Mutant">Mutant</option>
-                        <option value="Rodian">Rodian</option>
-                        <option value="Saiyan">Saiyan</option>
-                        <option value="Symbiote">Symbiote</option>
-                        <option value="Czarnian">Czarnian</option>
-                    </select>
-    
-                    <label style="margin-left: 20px;">
-                        <input type="checkbox" name="alignment" id="alignment-good" value="good">
-                        <span style="font-size: large;">Good</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" name="alignment" id="alignment-bad" value="bad">
-                        <span style="font-size: large;">Bad</span>
-                    </label>
-                    <label style="margin-right: 20px;">
-                        <input type="checkbox" name="alignment" id="alignment-neutral" value="neutral">
-                        <span style="font-size: large;">Neutral</span>
-                    </label>
-    
-                    <label for="attribute-dropdown" style="margin: 0 10px; font-size: large;">Order by</label>
-                    <select id="attribute-dropdown" style="padding: 5px; font-size: 16px;">
-                        <option value="id">Id</option>
-                        <option value="name">Name</option>
-                        <option value="biography.alignment">Alignment</option>
-                        <option value="cost">Cost</option>
-                        <option value="priority">Priority</option>
-                        <option value="appearance.race">Race</option>
-                    </select>
-    
-                    <label for="sort-dropdown" style="margin: 0 10px 0 20px;"><span style="font-size: large;">Sort</span></label>
-                    <select id="sort-dropdown" style="padding: 5px; font-size: 16px;">
-                        <option value="asc">Ascending</option>
-                        <option value="desc">Descending</option>
-                    </select>
-    
-                    <button id="filter-button" style="display:flex;gap: 20px;justify-content: space-between;padding: 5px 20px;margin-left: 20px;">Filter</button>
-                </div>
-    
-                <div class="heroes-list" style="display: flex; justify-content: space-between; width: 90vw; flex-wrap: wrap;padding: 20px;gap: 5px;">
+            <div id="all-heroes" class="page" style="background-color: white; width: 100%; box-shadow: 0 2px 7px rgba(0, 0, 0, .5) inset;">
+                <form id="hero-filter-form">
+                    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px 0 50px 0;">
+                        <label for="hero-filter" style="margin-right: 10px;"><span style="font-size: large;">Name</span></label>
+                        <input type="text" id="hero-filter" name="hero-filter" placeholder="Filter heroes by name..." style="padding: 5px; font-size: 16px;">
+                        
+                        <label for="race-dropdown" style="margin: 0 10px 0 20px;"><span style="font-size: large;">Race</span></label>
+                        <select id="race-dropdown" name="race-dropdown" style="padding: 5px; font-size: 16px;">
+                            <option value="All">- All -</option>
+                            <option value="Alien">Alien</option>
+                            <option value="Android">Android</option>
+                            <option value="Asgardian">Asgardian</option>
+                            <option value="Cyborg">Cyborg</option>
+                            <option value="Demi-God">Demi-God</option>
+                            <option value="Flora Colossus">Flora Colossus</option>
+                            <option value="God / Eternal">God / Eternal</option>
+                            <option value="Human">Human</option>
+                            <option value="Human / Altered">Human/Altered</option>
+                            <option value="Human/Radiation">Human/Radiation</option>
+                            <option value="Human-Kree">Human-Kree</option>
+                            <option value="Kakarantharaian">Kakarantharaian</option>
+                            <option value="Luphomoid">Luphomoid</option>
+                            <option value="Mutant">Mutant</option>
+                            <option value="Rodian">Rodian</option>
+                            <option value="Saiyan">Saiyan</option>
+                            <option value="Symbiote">Symbiote</option>
+                            <option value="Czarnian">Czarnian</option>
+                        </select>
+            
+                        <label style="margin-left: 20px;">
+                            <input type="checkbox" name="alignment" id="alignment-good" value="good">
+                            <span style="font-size: large;">Good</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="alignment" id="alignment-bad" value="bad">
+                            <span style="font-size: large;">Bad</span>
+                        </label>
+                        <label style="margin-right: 20px;">
+                            <input type="checkbox" name="alignment" id="alignment-neutral" value="neutral">
+                            <span style="font-size: large;">Neutral</span>
+                        </label>
+            
+                        <label for="attribute-dropdown" style="margin: 0 10px; font-size: large;">Order by</label>
+                        <select id="attribute-dropdown" name="attribute-dropdown" style="padding: 5px; font-size: 16px;">
+                            <option value="id">Id</option>
+                            <option value="name">Name</option>
+                            <option value="biography.alignment">Alignment</option>
+                            <option value="cost">Cost</option>
+                            <option value="priority">Priority</option>
+                            <option value="appearance.race">Race</option>
+                        </select>
+            
+                        <label for="sort-dropdown" style="margin: 0 10px 0 20px;"><span style="font-size: large;">Sort</span></label>
+                        <select id="sort-dropdown" name="sort-dropdown" style="padding: 5px; font-size: 16px;">
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+            
+                        <button type="submit" id="filter-button" style="padding: 5px 20px; margin-left: 20px;"><span style="font-size: large;">Filter</span></button>
+                    </div>
+                </form>
+            
+                <div class="heroes-list" style="display: flex; justify-content: space-between; width: 90vw; flex-wrap: wrap; padding: 20px; gap: 5px;">
                     <!-- Heroes will be dynamically added here -->
                 </div>
             </div>
+            
             <div id="draft" class="page" style="display:none; padding: 40px 0;">
               draft page
             </div>
@@ -89,5 +93,6 @@
         </main>
         <script src="./asset/js/nav.js"></script>
         <script type="module" src="./asset/js/allheroes.js"></script>
+
 </body>
 </html>
