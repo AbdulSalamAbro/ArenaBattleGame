@@ -134,13 +134,13 @@ body {
   
   .stats-label {
     font-weight: bold;
-    width: 50%; /* Ensures labels and values have enough space */
+    width: 50%;
     font-size: 12px; 
   }
   
   .stats-value {
     text-align: right;
-    width: 50%; /* Ensures labels and values have enough space */
+    width: 50%;
     font-size: 12px; 
   }
   
@@ -162,13 +162,13 @@ body {
     display: none;
   }
 
-  .hero-card.selected {
+  .selected-cards.selected {
     border-color: #4caf50;
     filter: brightness(1.2);
     background-color: rgba(7, 238, 18, 0.1);
 }
 
-.hero-card.selected .final-stats img {
+.selected-cards.selected .final-stats img {
   display: block;
 }
 
