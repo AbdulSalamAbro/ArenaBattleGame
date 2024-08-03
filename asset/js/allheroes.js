@@ -77,6 +77,9 @@ export function createHeroCard(hero) {
   finalStatsDiv.className = 'final-stats';
   finalStatsDiv.innerHTML = `
     <div class="priority">${priorityValue}</div>
+     <div>
+      <img src="https://www.freeiconspng.com/thumbs/check-mark-png/checkmark-png-line-29.png" />
+    </div>
     <div>${attackValue} / ${defenseValue}</div>
   `;
 
