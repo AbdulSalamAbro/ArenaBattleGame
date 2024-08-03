@@ -2,7 +2,7 @@ import heroes from './data/heroes.js';
 import _configSettings from './config.js';
 
 const heroesList = document.querySelector('.heroes-list');
-const heroCards = [];
+export const heroCards = [];
 
 // Create Hero Card Function
 export function createHeroCard(hero) {
