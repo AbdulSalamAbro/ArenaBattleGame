@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arena Battle Game</title>
 </head>
-<body>
-    Arena Battle Game
+ <body style="background-image: url('./media/bg.jpg');">
+        <header style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px; background-color: white;margin: auto;">
+            <h1>Battle Team Arena</h1>
+            <nav style="margin-top: 10px;">
+                <a href="#" onclick="showPage('all-heroes')">All heroes</a>
+                <a href="#" onclick="showPage('draft')">Go to the arena</a>
+                <a href="#" onclick="showPage('fame')">Hall of fame</a>
+            </nav>
+        </header>
+
+        <main style="background-color: white; height: 80%; max-width: fit-content; margin: 0 auto 50px auto;min-width: 90vw;box-shadow: 0 2px 7px rgba(0, 0, 0, .5) inset;">
+            <div id="all-heroes" class="page" style="background-color: white; width: 100%;box-shadow: 0 2px 7px rgba(0, 0, 0, .5) inset;">
+                all-heroespage
+            </div>
+            <div id="draft" class="page" style="display:none; padding: 40px 0;">
+              draft page
+            </div>
+            <div id="fame" class="page" style="display:none; padding: 40px 0;">
+              hall of fame page 
+            </div>
+        </main>
+        <script src="./asset/js/nav.js"></script>
 </body>
 </html>
