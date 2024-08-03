@@ -103,6 +103,52 @@
                 <!-- Heroes will be dynamically added here -->
               </div>
             </div>
+
+            
+        <div id="battle" class="page" style="display:none; padding: 40px 0;">
+            <h3 style="text-align: center; width: 50%; margin: 0 auto;">Open your booster pack and draft your heroes</h3>
+            <div style="display: flex; justify-content: center; margin: 40px 0;">
+                <button style="text-align: center; width: 20%; margin: 0 auto; padding: 20px 0; background-color: pink; border: 1px solid pink;" onclick="showPage('fight')" id="start-battle">Start Battle</button>
+            </div>
+
+            <div style="margin-left: 50px;">
+                <div style="display: flex; ">
+                    <div style="margin-right: 10px;width: 120px;">Defined heroes:</div>
+                    <div class="progress-bar"  style="background-color: #ddd; width: 20%; border-radius: 5px;margin: 5px 0;">
+                     
+                        <span id="progress-bar" style="width: 0%;display: block;height: 100%;background-color: blue; border-radius: 5px;"></span>
+                    </div>
+                    <div style="margin-left: 10px;" id="progress-count">0/ <span id="total-amount"></span> </div>
+                </div>
+        
+                <div style="display: flex; ">
+                    <div style="margin-right: 10px;width: 120px;">total cost:</div>
+                    <div class="progress-cost-bar"  style="background-color: #ddd; width: 20%; border-radius: 5px;margin: 5px 0;">
+                     
+                        <span id="cost-progress" style="width: 0%;display: block;height: 100%;background-color: blue; border-radius: 5px;"></span>
+                    </div>
+                    <div style="margin-left: 10px;" id="cost-progress-count">0/<span id="total-cost"></span></div>
+                </div>
+        
+                <div style="display: flex; ">
+                    <div style="margin-right: 10px;width: 120px;">total priority:</div>
+                    <div class="progress-priority-bar" style="background-color: #ddd; width: 20%; border-radius: 5px;margin: 5px 0;">
+                     
+                        <span id="priority-progress" style="width: 0%;display: block;height: 100%;background-color: blue; border-radius: 5px;"></span>
+                    </div>
+                    <div style="margin-left: 10px;" id="priority-progress-count">0/<span id="total-priority"></span></div>
+
+        
+                </div>
+                </div>
+              
+            
+            <div id="selection" style="display:flex;flex-wrap: wrap;justify-content: space-between; width:90vw;padding: 20px;gap: 5px;">
+                <!-- Content for heroes list in #battle -->
+            </div>
+        </div>
+
+
             <div id="fame" class="page" style="display:none; padding: 40px 0;">
               hall of fame page 
             </div>
@@ -111,6 +157,7 @@
         <script type="module" src="./asset/js/allheroes.js"></script>
         <script type="module" src="./asset/js/filter.js"></script>
         <script type="module" src="./asset/js/arena.js"></script>
+        <script type="module" src="./asset/js/selection.js"></script>
 
 </body>
 </html>
