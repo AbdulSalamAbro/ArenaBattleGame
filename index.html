@@ -85,6 +85,20 @@
             </div>
             
             <div id="draft" class="page" style="display:none; padding: 40px 0;">
+                    <h3 style="text-align: center; width: 50%; margin: 0 auto;">Open your booster pack and draft your heroes</h3>
+                            <div style="display: flex; justify-content: center; margin-top: 40px;">
+                                <input type="radio" id="alignment-good-battle" name="alignment-battle" value="good">
+                                <label for="alignment-good-battle">Good</label>
+                                <span id="good-count" style="padding-right: 20px;">(0)</span>
+                                <input type="radio" id="alignment-bad-battle" name="alignment-battle" value="bad" checked>
+                                <label for="alignment-bad-battle">Bad</label>
+                                <span id="bad-count">(0)</span>
+                            </div>
+                    <div style="display: flex; justify-content: center; margin: 40px 0;">
+                        <button id="start-draft" onclick="showPage('battle')" style="text-align: center; width: 20%; margin: 0 auto; padding: 20px 0; background-color: rgba(57, 237, 120, 0.5); border: 1px solid blue;">Start Draft</button>
+                    </div>
+                
+                
               <div id="heroes-battle-list" style="display: flex; justify-content: space-between; width: 90vw; flex-wrap: wrap; padding: 20px; gap: 5px;">
                 <!-- Heroes will be dynamically added here -->
               </div>
@@ -96,6 +110,7 @@
         <script  src="./asset/js/nav.js"></script>
         <script type="module" src="./asset/js/allheroes.js"></script>
         <script type="module" src="./asset/js/filter.js"></script>
+        <script type="module" src="./asset/js/arena.js"></script>
 
 </body>
 </html>
