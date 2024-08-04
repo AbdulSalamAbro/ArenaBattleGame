@@ -162,13 +162,13 @@ body {
     display: none;
   }
 
-.selected-cards.selected {
+  .battle-card.selected {
     border-color: #4caf50;
     filter: brightness(1.2);
     background-color: rgba(7, 238, 18, 0.1);
 }
 
-.selected-cards.selected .final-stats img {
+.battle-card.selected .final-stats img {
   display: block;
 }
 
