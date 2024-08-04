@@ -16,7 +16,7 @@ const startBattleButton = document.getElementById('start-battle');
 
 
 let battleCards = [];
-export let selectedCards = [];
+let selectedCards = [];
 let totalCost = 0;
 let totalPriority = 0;
 
@@ -36,7 +36,7 @@ battleCards.forEach(cardData => {
 shuffleArray(battleCards);
 
 opponentPage.innerHTML = '';
-export const opponentCards = battleCards.slice(0, 5);
+const opponentCards = battleCards.slice(0, 5);
 opponentCards.forEach(cardObj => {
     opponentPage.appendChild(cardObj.card);
 });
@@ -97,5 +97,3 @@ function displaySelectedCards(selectedCards) {
 }
 
 selection();
-
-
